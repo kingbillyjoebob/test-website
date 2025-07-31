@@ -2,14 +2,39 @@
     <head>
         <meta charset="utf-8">
         <title>Test Website</title>
+        <script>
+            function gayFormProcess() {
+                let formObj = document.getElementById("gayForm")
+                if (formObj.areYouGay.options[formObj.areYouGay.selectedIndex].text == "Yes") {
+                    alert("You are Gay!")
+                } else {
+                    alert("You are straight (sad emoji)")
+                }
+            }
+        </script>
     </head>
 </html>
 
 <body>
     <main>
-        <center><h4>Body Mass Index Calculator</h4></center>
-        <p>This is a form that exists</p>
-        <form></form>
+        <h4>Gay Calculator</h4>
+        <p>Are You Gay????</p>
+        <form id="gayForm" onsubmit="gayFormProcess()">
+            <table>
+                <tr>
+                    <td><label for="gay">Is You Name Isaac?</label></td>
+                    <td><select id="areYouGay" name="areYouGay">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Calculate">
+                    </td>
+                </tr>
+            </table>
+        </form>
         <p>More info can be found at:
         <a href="https://calebbradford.com">Caleb Bradford's</a> website</p>
     </main>
